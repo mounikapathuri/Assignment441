@@ -1,0 +1,33 @@
+package Assignment44;
+import java.util.Scanner;
+
+public class Assignment44 {
+
+	public static void main(String[] args) {
+		manager m=new manager();
+		m.caluclateSal();
+		trainee t=new trainee();
+		t.caluclateSal();
+	}
+
+}
+class manager{
+	Scanner sc=new Scanner(System.in);
+	double totalSal,travelAll;
+	void caluclateSal(){
+		double basicSal=20000;
+		System.out.println("the basic salary of manager is : "+basicSal);
+		travelAll=0.15*(basicSal);
+		totalSal=basicSal+travelAll;
+		System.out.println("the total salary of manager by adding up travel allowance is : "+totalSal);
+	}	
+}
+class trainee extends manager{
+	void caluclateSal(){
+		double basicSal=10000;
+		System.out.println("the basic salary of trainee is : "+basicSal);
+		travelAll=0.1*(basicSal);
+		totalSal=basicSal+travelAll;
+		System.out.println("the total salary of trainee by adding up travel allowance is : "+totalSal);
+}
+}
